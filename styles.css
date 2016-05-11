@@ -49,6 +49,28 @@ a img{border:0px;}
 	height:26px;
 	background:url(images/sm-linkedin-icon.png) no-repeat;
 }
+
+#contactElement li{
+	list-style:none;
+	padding-left: 30px;
+	padding-top: 3px;
+	margin:0 0 5px 0;
+}
+.mail{
+	display:block;
+	background:url(images/mail-logo.png) no-repeat;;
+}
+
+.phone{
+	display:block;
+	background:url(images/logo-phone.png) no-repeat;;
+}
+
+.adress{
+	display:block;
+	background:url(images/position-logo.png) no-repeat;;
+}
+
 #about .content{overflow:auto;}
 #about .content img{float:left; margin-right:40px; border:5px solid #222222;}
 #about .content #service-icons{margin-top:20px;}
@@ -258,3 +280,13 @@ nav ul li {
 }
 .content { width: 100%; height: 100%; }
 .content > section { width: 100%; height: 100%; }
+
+#social-footer #socialNetwork{
+	float:left;
+	margin-bottom: 20px;
+}
+
+#social-footer #socialContact{
+	float:left;
+	clear:left;
+}
