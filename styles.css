@@ -239,6 +239,7 @@ nav {
 	top:0px;
 	left:50%;
 	margin: 0 0 0 -475px;
+	z-index:1000;
 }
 
 nav ul {
