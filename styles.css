@@ -8,7 +8,7 @@ h1{font: 400 58px/60px 'Bree Serif', Georgia, serif; color:#6a6969;}
 h2{font: 400 18px/22px 'Bree Serif', Georgia, serif; color:#6a6969;}
 h3{font: 400 14px/16px 'Bree Serif', Georgia, serif; color:#6a6969;}
 ul{margin:0px; padding:0px;}
-a {text-decoration:none; color:#6a6969;}
+a {text-decoration:none; color:#AAAAAA;}
 a:hover {color:#979797;}
 a img{border:0px;}
 
@@ -18,36 +18,6 @@ a img{border:0px;}
 	background:#E9E6E6;
 	overflow:auto;
 	padding-bottom:100px;
-}
-
-/****************************************************/
-/* HEADER */
-/****************************************************/
-
-#header{
-	width:864px;
-	height:115px;
-	background-color:#524B4B;
-	padding:0px 43px;
-	position: fixed;
-	top:0px;
-	left:50%;
-	margin: 0 0 0 -475px;
-}
-#header #logo{
-	padding-top:40px;
-	float:left;
-}
-#header #main-menu{float:right; padding-top:45px;}
-#header #main-menu li{
-	float:left;
-	list-style:none;
-	margin-left:27px;
-	font: 400 16px/20px 'Bree Serif', Georgia, serif;
-}
-
-#header #main-menu li a{
-	color: #FFFFFF;
 }
 
 /****************************************************/
@@ -258,3 +228,32 @@ a img{border:0px;}
     float: left;
     width: 33%;
 }
+
+
+nav {
+	width:864px;
+	height:115px;
+	background-color:#524B4B;
+	padding:0px 43px;
+	position: fixed;
+	top:0px;
+	left:50%;
+	margin: 0 0 0 -475px;
+}
+
+nav ul {
+	float:right; padding-top:45px;
+}
+
+nav ul li {
+	float:left;
+	list-style:none;
+	margin-left:27px;
+	font: 400 16px/20px 'Bree Serif', Georgia, serif;
+}
+
+.active{
+	color: #FFFFFF;
+}
+.content { width: 100%; height: 100%; }
+.content > section { width: 100%; height: 100%; }

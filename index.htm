@@ -17,20 +17,22 @@
 </head>
 
 <body>
-<div id="header">
-	<ul id="main-menu">
-    	<li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skill">Skill</a></li>
-        <li><a href="#contact">Contact</a></li>
+<header id="header">
+	<nav>
+		<ul id="main-menu">
+	    	<li><a href="#about">About</a></li>
+	      <li><a href="#education">Education</a></li>
+	      <li><a href="#experience">Experience</a></li>
+	      <li><a href="#skill">Skill</a></li>
+	      <li><a href="#contact">Contact</a></li>
     </ul>
-</div>
+	</nav>
+</header>
 
 <div id="container">
 
 <!--Begin About Section-->
-    <div id="about">
+    <section id="about">
     	<h1>About</h1>
         <ul id="top-social">
             <li><a href="https://www.linkedin.com/in/melvyn-peignon-a56b2890?trk=nav_responsive_tab_profile_pic" class="linkedin" target="_blank">LinkedIn</a></li>
@@ -38,7 +40,7 @@
         </ul>
         <div class="top-divider"></div>
         <div class="content">
-        	<img src="images/melvyn_peignon.jpg" />
+        	<img src="images/melvyn_peignon.jpg"/>
             <h2>My Name is Melvyn Peignon and I want to be a Data scientist!</h2>
             <p>I'm a master student from EISTI (engeenering school in France). I'm interested in data science and science in general. I'm a passionate developper and love to work on interesting project which include data. I mainly developp in Java and Python but I can also use C/C++, R, OCaml but those are not my favorite. I'm looking for any kind of opportunity, work proposition, open source project, toy apps ect...</p>
 						<form method="get" action="cv/CVanglais-.pdf">
@@ -46,11 +48,11 @@
 						</form>
 				</div>
     <div class="bottom-divider"></div>
-    </div>
+    </section>
 <!--End About Section-->
 
 <!--Begin Experience Section-->
-    <div id="education">
+    <section id="education">
     	<h1>Education</h1>
         <div class="top-divider"></div>
         <div class="content">
@@ -70,11 +72,11 @@
             </div>
         </div>
         <div class="bottom-divider"></div>
-    </div>
+    </section>
 <!--End Experience Section-->
 
 <!--Begin Work Section-->
-    <div id="experience">
+    <section id="experience">
     	<h1>Experience</h1>
         <div class="top-divider"></div>
         	<div class="content">
@@ -98,10 +100,10 @@
 	            </div>
             </div>
         <div class="bottom-divider"></div>
-    </div>
+    </section>
 <!--End Work Section-->
 
-<div id="skill">
+<section id="skill">
 	<h1>Skill</h1>
 		<div class="top-divider"></div>
 		<div id="chart">
@@ -118,10 +120,10 @@
 			</div>
 			<div class="bottom-divider"></div>
 		</div>
-</div>
+</section>
 
 <!--Begin Connect Section-->
-    <div id="contact">
+    <section id="contact">
     	<h1>Contact</h1>
         <div class="top-divider"></div>
         	<div class="content">
@@ -145,7 +147,7 @@
 										</ul>
                 </div>
             </div>
-    </div>
+    </section>
 <!--End Connect Section-->
 
 </div>
@@ -164,6 +166,44 @@
                 });
             });
 
+
+						$(document).ready(function () {
+								$(document).on("scroll", onScroll);
+
+								$('a[href^="#"]').on('click', function (e) {
+									e.preventDefault();
+									$(document).off("scroll");
+
+									$('a').each(function () {
+										$(this).removeClass('active');
+									})
+									$(this).addClass('active');
+
+									var target = this.hash;
+									$target = $(target);
+									$('html, body').stop().animate({
+										'scrollTop': $target.offset().top+2
+									}, 500, 'swing', function () {
+										window.location.hash = target;
+										$(document).on("scroll", onScroll);
+									});
+								});
+							});
+
+							function onScroll(event){
+								var scrollPosition = $(document).scrollTop();
+								$('nav a').each(function () {
+									var currentLink = $(this);
+									var refElement = $(currentLink.attr("href"));
+									if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+										$('nav ul li a').removeClass("active");
+										currentLink.addClass("active");
+									}
+									else{
+										currentLink.removeClass("active");
+									}
+								});
+							}
         </script>
 </body>
 </html>
