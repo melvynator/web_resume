@@ -26,8 +26,16 @@ a img{border:0px;}
 
 #about{margin:0px 43px; padding-top:115px;}
 #about h1{float:left;}
-#about #top-social{float:right; padding-top:62px;}
+#about #top-social{float:right; padding-top:62px; margin-bottom: 20px;}
+#about #top-social-contact{float:right; clear:right; }
 #about #top-social li{float:left; list-style:none; margin-left:10px;}
+#about #top-social-contact li{
+	float:left;
+	list-style:none;
+	margin-left:10px;
+	padding-left: 30px;
+	padding-top: 3px;
+}
 #about #top-social .facebook{
 	text-indent:-9999px;
 	display:block;
