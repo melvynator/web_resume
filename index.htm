@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Melvyn Peignon - Personnal Resume</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/chart.js"></script>
+
+
+</head>
+
+<body>
+<div id="header">
+	<ul id="main-menu">
+    	<li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
+<div id="container">
+
+<!--Begin About Section-->
+    <div id="about">
+    	<h1>About</h1>
+        <ul id="top-social">
+            <li><a href="https://www.linkedin.com/in/melvyn-peignon-a56b2890?trk=nav_responsive_tab_profile_pic" class="linkedin">LinkedIn</a></li>
+						<li><a href="https://github.com/melvynator" class="github">Github</a></li>
+        </ul>
+        <div class="top-divider"></div>
+        <div class="content">
+        	<img src="images/melvyn_peignon.jpg" />
+            <h2>My Name is Melvyn Peignon and I want to be a Data scientist!</h2>
+            <p>I'm a master student from EISTI (engeenering school in France). I'm interested in data science and science in general. I'm a passionate developper and love to work on interesting project which include data. I mainly developp in Java and Python but I can also use C/C++, R, OCaml but those are not my favorite. I'm looking for any kind of opportunity, work proposition, open source project, toy apps ect...</p>
+						<form method="get" action="cv/CVanglais-.pdf">
+							<input type="button" class="cvDownload" value="Download my resume" onclick="window.open('cv/CVanglais-.pdf')">
+						</form>
+				</div>
+    <div class="bottom-divider"></div>
+    </div>
+<!--End About Section-->
+
+<!--Begin Experience Section-->
+    <div id="education">
+    	<h1>Education</h1>
+        <div class="top-divider"></div>
+        <div class="content">
+            <div class="col">
+            <h2>Master’s Degree in Engineering</h2><h3><a href ='#'>EISTI</a></h3>
+            <p>A general formation in Computer science, Maths and human ressources. I choose to specialize myself in computer science and maths and the last year in data science.</p>
+            </div>
+
+            <div class="col col-mid">
+            <h2>Bachelor of science</h2><h3><a href ='#'>University of Cergy</a></h3>
+            <p>In parralel of my Engeeniring school I a bachelor of science with computer science as a major and math as a minor.</p>
+            </div>
+
+            <div class="col">
+            <h2>Baccalauréat (French secondary school diploma)</h2><h3><a href ='#'>Institution Rey</a></h3>
+            <p>I went into a scientifical "baccalauréat" with a speciality in mathematics. I received my B.A. with honours.</p>
+            </div>
+        </div>
+        <div class="bottom-divider"></div>
+    </div>
+<!--End Experience Section-->
+
+<!--Begin Work Section-->
+    <div id="experience">
+    	<h1>Experience</h1>
+        <div class="top-divider"></div>
+        	<div class="content">
+
+						<div class="col">
+							<h2>Data scientist assistant at Warner Bros</h2>
+							<div class="corporationLogo"><img class="logo" src="images/Warner.png"/></div>
+							<p>Working with the digital marketing team, I worked on the creation of a benchmark, add targeting, news recommendation on the Warner bros website, ect... Technologies used: Python, scikit-learn, Hbase, solR, Spark, Pandas, D3.js</p>
+						</div>
+
+						<div class="col col-mid">
+								<h2>Data scientist internship at Yanport</h2>
+								<div class="corporationLogo"><img class="logo" src="images/yanport.gif"/></div>
+								<p>I helped to develop an algorithm that aims to detect deduplicate content (At the end the algorithme was 95% efficient). Technologies used: Java, Python, Cassandra, Elasticsearch, AngularJs, HighCharts</p>
+						</div>
+
+	            <div class="col">
+		            <h2>School project for Askia survey</h2>
+								<div class="corporationLogo"><img class="logo" src="images/askia.png"/></div>
+		            <p>I develop a software that allows a user to lematize and identify concept and then categorize text (Movie review) using Naive Bayes classifier. Technologies used: C++</p>
+	            </div>
+            </div>
+        <div class="bottom-divider"></div>
+    </div>
+<!--End Work Section-->
+
+<div id="skill">
+	<h1>Skill</h1>
+		<div class="top-divider"></div>
+		<div id="chart">
+			<div id="skillDev">
+				<div id="devChart"></div>
+			</div>
+
+			<div id="skillBdd">
+				<div id="BDD"></div>
+			</div>
+
+			<div id="skillSE">
+				<div id="searchEngine"></div>
+			</div>
+			<div class="bottom-divider"></div>
+		</div>
+</div>
+
+<!--Begin Connect Section-->
+    <div id="contact">
+    	<h1>Contact</h1>
+        <div class="top-divider"></div>
+        	<div class="content">
+            	<div id="form">
+                	<form action="MAILTO:peignonmel@eisti.eu" method="post">
+                    	<span>Name</span>
+                        <input type="text" name="name" class="name" />
+                        <span>Email</span>
+                        <input type="text" name="email" class="email"/>
+                        <span>Message</span>
+                        <textarea class="message"></textarea>
+                        <input type="submit" name="submit" value="Submit" class="submit">
+                    </form>
+                </div>
+                <div id="social-footer">
+                	<h2>Keep in touch!!</h2>
+                    <p>Feel free to add me on LinkedIn (link below) or to sent me a message if you are interested in my profile and want to know more about me.</p>
+                    <ul id="sm-links">
+                        <li><a href="https://www.linkedin.com/in/melvyn-peignon-a56b2890?trk=nav_responsive_tab_profile_pic" class="linkedin">LinkedIn</a></li>
+												<li><a href="https://github.com/melvynator" class="github">Github</a></li>
+										</ul>
+                </div>
+            </div>
+    </div>
+<!--End Connect Section-->
+
+</div>
+
+ <!-- The JavaScript -->
+        <script type="text/javascript">
+    		$(function() {
+                $('#main-menu li a').bind('click',function(event){
+                    var $anchor = $(this);
+
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+
+                    event.preventDefault();
+                });
+            });
+
+        </script>
+</body>
+</html>
