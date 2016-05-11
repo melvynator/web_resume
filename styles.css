@@ -121,6 +121,17 @@ a img{border:0px;}
 
 
 /****************************************************/
+/* PERSONAL WORK */
+/****************************************************/
+#personalWork{margin:0px 43px; padding-top:115px;}
+#personalWork .col{
+	width:235px;
+	float:left;
+}
+#personalWork .content{overflow:auto;}
+#personalWork .col-mid{margin:0px 65px;}
+
+/****************************************************/
 /* SKILL SECTION */
 /****************************************************/
 #skill{margin:0px 43px; padding-top:115px;}
@@ -297,4 +308,9 @@ nav ul li {
 #social-footer #socialContact{
 	float:left;
 	clear:left;
+}
+
+.date{
+	font-weight: bold;
+	color:#111111;
 }
